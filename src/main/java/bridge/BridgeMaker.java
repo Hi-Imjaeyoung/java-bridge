@@ -21,11 +21,11 @@ public class BridgeMaker {
     public List<String> makeBridge(int size) {
         List<String> bridge = new ArrayList<>();
         while(bridge.size()<size){
-            if(bridgeNumberGenerator.generate()==1){
-                bridge.add("U");
+            if(bridgeNumberGenerator.generate()==Moving.UP.getNumericValue()){
+                bridge.add(Moving.UP.getSymbol());
                 continue;
             }
-            bridge.add("D");
+            bridge.add(Moving.DOWN.getSymbol());
         }
         return bridge;
     }
